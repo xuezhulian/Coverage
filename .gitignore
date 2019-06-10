@@ -1,0 +1,6 @@
+*.DS_Store
+Coverage/
+Coverage.info
+env.sh
+diff
+*.pyc
