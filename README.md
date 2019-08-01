@@ -14,6 +14,7 @@ xcode->build setttings:GCC_GENERATE_TEST_COVERAGE_FILES GCC_INSTRUMENT_PROGRAM_F
 
 修改main函数
 CODECOVERAGE在GCC_PREPROCESSOR_DEFINITIONS里面定义
+```
 #if CODECOVERAGE
 #import <RCodeCoverage/GCDAProfiling.h>
 #endif
@@ -25,6 +26,7 @@ int main(int argc, char * argv[]) {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
+```
 
 git commit之后 执行 python coverage.py (你的工程目录) 会添加覆盖率信息到commit-msg 这一步可以自定义push脚本  
 
